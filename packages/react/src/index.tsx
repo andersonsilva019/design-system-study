@@ -1,5 +1,9 @@
-import { colors } from '@anderson-silva-ui/tokens'
+import { styled } from './styles'
+
+const Title = styled('h1', {
+  color: '$ignite300',
+})
 
 export function App() {
-  return <h1 style={{ color: colors.ignite300 }}>Hello</h1>
+  return <Title>Hello</Title>
 }
