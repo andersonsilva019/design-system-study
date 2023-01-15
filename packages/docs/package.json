@@ -13,7 +13,10 @@
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@anderson-silva-ui/react": "*",
+    "@anderson-silva-ui/tokens": "*",
+    "@anderson-silva-ui/eslint-config": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
