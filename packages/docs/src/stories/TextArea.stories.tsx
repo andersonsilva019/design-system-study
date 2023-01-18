@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Box, Text, TextArea, TextAreaProps } from '@anderson-silva-ui/react'
 
 export default {
-  title: 'Form/Text Area',
+  title: 'Form/TextArea',
   component: TextArea,
   args: {},
   decorators: [
