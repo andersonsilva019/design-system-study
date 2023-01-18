@@ -1,0 +1,2 @@
+import{A as t}from"./index-997461bd.js";import"./index-34e51894.js";import"./es.object.get-own-property-descriptor-64192e07.js";import"./index-75cd1920.js";import"./jsx-runtime-da4cfb3b.js";const i={title:"Components/Avatar",component:t,args:{src:"https://github.com/andersonsilva019.png",alt:"Anderson Silva"},argsTypes:{src:{control:{type:"text"}}}},e={},p={args:{src:""}},c=["Primary","withFallback"];export{e as Primary,c as __namedExportsOrder,i as default,p as withFallback};
+//# sourceMappingURL=Avatar.stories-b188255b.js.map
