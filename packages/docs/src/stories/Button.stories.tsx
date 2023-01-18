@@ -9,6 +9,9 @@ export default {
     children: 'Send',
   },
   argTypes: {
+    onClick: {
+      action: 'clicked',
+    },
     variant: {
       options: ['primary', 'secondary', 'tertiary'],
       control: { type: 'radio' },
