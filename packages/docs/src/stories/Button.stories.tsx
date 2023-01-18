@@ -7,6 +7,9 @@ export default {
   component: Button,
   args: {
     children: 'Send',
+    variant: 'primary',
+    size: 'md',
+    disabled: false,
   },
   argTypes: {
     onClick: {

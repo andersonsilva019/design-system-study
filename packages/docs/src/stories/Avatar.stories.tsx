@@ -8,12 +8,17 @@ export default {
     src: 'https://github.com/andersonsilva019.png',
     alt: 'Anderson Silva',
   },
+  argsTypes: {
+    src: {
+      control: { type: 'text' },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
 
 export const withFallback: StoryObj<AvatarProps> = {
   args: {
-    src: undefined,
+    src: '',
   },
 }
