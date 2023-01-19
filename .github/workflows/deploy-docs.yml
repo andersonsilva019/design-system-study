@@ -6,7 +6,7 @@ on:
       - stage
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-
+  deploy:
       - name: Deploy storybook to Netlify
         uses: jsmrcaga/action-netlify-deploy@master
         with:
