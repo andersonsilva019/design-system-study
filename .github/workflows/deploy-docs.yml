@@ -24,6 +24,6 @@ jobs:
       - name: Deploy storybook
         uses: netlify/actions/diff-includes@master
         with:
-          args: storybook-static
+          args: ./packages/docs/storybook-static
 
        
