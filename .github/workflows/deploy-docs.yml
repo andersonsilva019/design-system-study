@@ -22,7 +22,7 @@ jobs:
       - run: npm run build
 
       - name: Deploy storybook
-        uses: netlify/actions/diff-includes@master
+        uses: jsmrcaga/action-netlify-deploy@master
         with:
           args: ./packages/docs/storybook-static
 
