@@ -31,4 +31,7 @@ jobs:
           NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
           NETLIFY_DEPLOY_TO_PROD: true
 
+      - run: "echo $NETLIFY_LIVE_URL"
+      
+
        
