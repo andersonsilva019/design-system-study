@@ -26,7 +26,6 @@ jobs:
         with:
           build_command: npm run build
           build_directory: packages/docs/storybook-static
-        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
