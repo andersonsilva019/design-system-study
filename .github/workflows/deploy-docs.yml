@@ -3,7 +3,7 @@ name: Publish Docs on Netlify
 on:
   push:
     branches:
-      - main
+      - stage
 
 jobs:
   build-and-deploy:
@@ -16,23 +16,27 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.15.0
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
 
       - run: npm run build
+        env:
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
-      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
-        with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
-          NETLIFY_DEPLOY_TO_PROD: true
-
-      - name: Deploy storybook
-        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+      - name: Deploy storybook to Netlify
+        uses: jsmrcaga/action-netlify-deploy@master
         with:
           build_command: npm run build
           build_directory: packages/docs/storybook-static
-        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
           NETLIFY_DEPLOY_TO_PROD: true
+
+      - run: "echo $NETLIFY_LIVE_URL"
+      
 
        
